@@ -1,1 +1,20 @@
 
+name: Hello World
+
+# Trigger Workflow on push events
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # Job named hello-job
+  hello-job:
+    # Run Job on ubuntu-latest runner
+    runs-on: ubuntu-latest
+
+    steps:
+      # Job has 1 step named Echo text
+      - name: Echo text
+        # Run a command - echo "Hello, world!"
+        run: echo "Hello, world!"
